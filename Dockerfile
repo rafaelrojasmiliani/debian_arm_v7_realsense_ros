@@ -2,7 +2,6 @@ FROM --platform=linux/arm/v7 rafa606/debian_arm_v7_realsense
 WORKDIR /catkinws
 ENV SSL_CERT_FILE=/usr/lib/ssl/certs/ca-certificates.crt
 SHELL ["/bin/bash", "-c"]
-RUN cd /librealsense/build && make install
 RUN mkdir  /catkinws/src && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -o \
