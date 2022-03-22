@@ -34,7 +34,7 @@ RUN mkdir  /catkinws/src && \
         python3-wheel python-rosdep python-rosinstall-generator \
         python-wstool python-rosinstall && \
     rosdep init && rosdep update && \
-        rosinstall_generator \
+    rosinstall_generator \
         roscpp \
         std_msgs \
         pluginlib \
@@ -61,7 +61,7 @@ RUN mkdir  /catkinws/src && \
         realsense2_camera_msgs \
         realsense2_description \
         cv-bridge \
-                --rosdistro noetic --deps --wet-only --tar > ros.rosinstall && \
+        --rosdistro noetic --deps --wet-only --tar > ros.rosinstall && \
     wstool init -j8 src ros.rosinstall && \
     rosdep install -r -q  --from-paths src --ignore-src --rosdistro noetic -y && \
     rm -rf /var/lib/apt/lists/* && \

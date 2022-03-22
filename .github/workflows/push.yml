@@ -19,6 +19,6 @@ jobs:
       - name: build and push to docker
         uses: docker/build-push-action@v2
         with:
-          tags: rafa606/debian_arm_v7_ros
+          tags: rafa606/debian_arm_v7_realsense_ros
           push: true
           platforms: linux/arm/v7
